@@ -1,0 +1,12 @@
+C:\Users\jamdl\source\repos\ACatsTalePOE_Copy\bin\Debug\ACatsTalePOE.exe.config
+C:\Users\jamdl\source\repos\ACatsTalePOE_Copy\bin\Debug\ACatsTalePOE.exe
+C:\Users\jamdl\source\repos\ACatsTalePOE_Copy\bin\Debug\ACatsTalePOE.pdb
+C:\Users\jamdl\source\repos\ACatsTalePOE_Copy\obj\Debug\ACatsTalePOE.csproj.AssemblyReference.cache
+C:\Users\jamdl\source\repos\ACatsTalePOE_Copy\obj\Debug\ACatsTalePOE.fCatTale.resources
+C:\Users\jamdl\source\repos\ACatsTalePOE_Copy\obj\Debug\ACatsTalePOE.Info.resources
+C:\Users\jamdl\source\repos\ACatsTalePOE_Copy\obj\Debug\ACatsTalePOE.Properties.Resources.resources
+C:\Users\jamdl\source\repos\ACatsTalePOE_Copy\obj\Debug\ACatsTalePOE.StartUp.resources
+C:\Users\jamdl\source\repos\ACatsTalePOE_Copy\obj\Debug\ACatsTalePOE.csproj.GenerateResource.cache
+C:\Users\jamdl\source\repos\ACatsTalePOE_Copy\obj\Debug\ACatsTalePOE.csproj.CoreCompileInputs.cache
+C:\Users\jamdl\source\repos\ACatsTalePOE_Copy\obj\Debug\ACatsTalePOE.exe
+C:\Users\jamdl\source\repos\ACatsTalePOE_Copy\obj\Debug\ACatsTalePOE.pdb

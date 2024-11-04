@@ -9,9 +9,12 @@ namespace ACatsTalePOE
     //2Q2.1
     public abstract class EnemyTile : CharacterTile
     {
+        //3Q2.1
+        protected Level level;
         //Constructor
-        public EnemyTile(Position pos, int h, int a) : base(pos, h, a)
+        public EnemyTile(Position pos, int h, int a, Level l) : base(pos, h, a)
         {
+            level = l;
         }
 
         //2Q2.1

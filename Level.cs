@@ -42,8 +42,7 @@ namespace ACatsTalePOE
             //Check if the hero tile (ht) is null - this means the hero has not been placed as yet
             if (ht == null)
             {
-                CreateTile(TileType.Hero, pos); //New tile of type Hero at the random position
-                heroTile = new HeroTile(pos);// New hero tile and random position
+                heroTile = (HeroTile)CreateTile(TileType.Hero, pos);// New hero tile and random position
             }
             else
             {
@@ -55,15 +54,13 @@ namespace ACatsTalePOE
 
             //1Q5.1
             pos = getRandomEmptyPosition(); //Finding a random empty position on the map to exit
-            exitTile = new ExitTile(pos); // New ExitTile at the random position
-            CreateTile(TileType.Exit, pos); //new tile of type exit at the same position
+            exitTile = (ExitTile) CreateTile(TileType.Exit, pos); //new tile of type exit at the same position
 
             //2Q2.3
             for (int i = 0; i < noOfEnemy; i++)//Creates the number of Enemies specified
             {
                 pos = getRandomEmptyPosition();//Finding a random empty position on the map for enemies
-                enemyTiles[i] = new GruntTile(pos);// New Grunt at the random position
-                CreateTile(TileType.Enemy, pos);//new tile of type grunt at the same position
+                enemyTiles[i] =(GruntTile) CreateTile(TileType.Enemy, pos);//new tile of type grunt at the same position
             }
 
 
@@ -71,8 +68,7 @@ namespace ACatsTalePOE
             for (int i = 0; i < noOfPickup; i++)//Creates the number of pickups specified
             {
                 pos = getRandomEmptyPosition();//Finding a random empty position on the map for pickups
-                CreateTile(TileType.Pickup, pos);// new tile of type healthat the same position
-                pickupTiles[i] = new HealthPickupTile(pos);// New Health at the random position
+                pickupTiles[i] = (HealthPickupTile) CreateTile(TileType.Pickup, pos);// New Health at the random position
             }
         }
         //Accessor Methods
@@ -139,7 +135,7 @@ namespace ACatsTalePOE
                     tempTile = new ExitTile(pos); //Creates an ExitTile
                     break;
                 case TileType.Enemy:
-                    tempTile = new GruntTile(pos, 10, 1); //Creates an GruntTile,
+                    tempTile = new GruntTile(pos, 10, 1, this); //Creates an GruntTile,
                     break;
                 case TileType.Pickup:
                     tempTile = new HealthPickupTile(pos);//Creates a HealthPickupTile
@@ -175,7 +171,7 @@ namespace ACatsTalePOE
                     tempTile = new ExitTile(pos); //Creates an ExitTile
                     break;
                 case TileType.Enemy:
-                    tempTile = new GruntTile(pos, 10, 1); //Creates an GruntTile,
+                    tempTile = new GruntTile(pos, 10, 1, this); //Creates an GruntTile,
                     break;
                 case TileType.Pickup:
                     tempTile = new HealthPickupTile(pos);//Creates a HealthPickupTile

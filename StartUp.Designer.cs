@@ -36,6 +36,7 @@
             // 
             // btnInfo
             // 
+            this.btnInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInfo.Font = new System.Drawing.Font("Cooper Black", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInfo.Image = global::ACatsTalePOE.Properties.Resources.BlueBackground;
             this.btnInfo.Location = new System.Drawing.Point(921, 391);
@@ -48,6 +49,7 @@
             // 
             // btnPlay
             // 
+            this.btnPlay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnPlay.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlay.Image = global::ACatsTalePOE.Properties.Resources.BlueBackground;
             this.btnPlay.Location = new System.Drawing.Point(106, 391);
@@ -60,6 +62,7 @@
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
