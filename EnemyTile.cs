@@ -23,6 +23,6 @@ namespace ACatsTalePOE
         //2Q2.1
         //This will see what targets are in the enemy vision 
         public abstract CharacterTile[] GetTarget();
-
+        
     }
 }
