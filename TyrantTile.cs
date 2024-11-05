@@ -28,6 +28,7 @@ namespace ACatsTalePOE
             }
         }
 
+        //This needs alot of work
         public override bool getMove(out Tile tile)
         {
             bool temp = true;
@@ -71,7 +72,8 @@ namespace ACatsTalePOE
             }
             return temp;
         }
-       
 
+        public override CharacterTile[] GetTarget()
+        { }
     }
 }

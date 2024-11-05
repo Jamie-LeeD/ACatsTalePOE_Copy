@@ -129,7 +129,7 @@ namespace ACatsTalePOE
                     tempTile = new WallTile(pos); //Creates a WallTile
                     break;
                 case TileType.Hero:
-                    tempTile = new HeroTile(pos, 40, 5);  //Creates a HeroTile with health and attack power
+                    tempTile = new HeroTile(pos);  //Creates a HeroTile with health and attack power
                     break;
                 case TileType.Exit:
                     tempTile = new ExitTile(pos); //Creates an ExitTile
@@ -165,7 +165,7 @@ namespace ACatsTalePOE
                     tempTile = new WallTile(pos); //Creates a WallTile
                     break;
                 case TileType.Hero:
-                    tempTile = new HeroTile(pos, 40, 5);  //Creates a HeroTile with health and attack power
+                    tempTile = new HeroTile(pos);  //Creates a HeroTile with health and attack power
                     break;
                 case TileType.Exit:
                     tempTile = new ExitTile(pos); //Creates an ExitTile
