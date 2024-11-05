@@ -74,6 +74,40 @@ namespace ACatsTalePOE
         }
 
         public override CharacterTile[] GetTarget()
-        { }
+        {
+            Tile[,] map = level.Map;
+
+            int width, height, x, y;
+            x = getX();
+            y = getY();
+            width = level.Width;
+            height = level.Height;
+            List<Tile> tiles = new List<Tile>();
+
+            for (int i = 0; i < width; i++)
+            {
+                if (map[i, y] is CharacterTile)
+                {
+                    tiles.Add(map[i, y]);
+                }
+            }
+            for (int i = 0; x < height; i++)
+            {
+                if (map[x, i] is CharacterTile)
+                {
+                    tiles.Add(map[x, i]);
+                }
+            }
+            tiles.Remove(map[x,y]);
+
+            int size = tiles.Count;
+            Tile[] tiles1 = new Tile[size];
+            CharacterTile[] characterTile = new CharacterTile[size];
+            for (int i = 0;i < size;i++)
+            {
+                characterTile[i] = (CharacterTile) tiles1[i];
+            }
+            return characterTile;
+        }
     }
 }
