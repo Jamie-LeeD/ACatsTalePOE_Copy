@@ -10,7 +10,7 @@ namespace ACatsTalePOE
     public class GruntTile : EnemyTile
     {
         //Constructor
-        public GruntTile(Position pos, int h = 10, int a = 1, Level l) : base(pos, h, a, l)
+        public GruntTile(Position pos, Level l) : base(pos, 10, 1, l)
         {
 
         }

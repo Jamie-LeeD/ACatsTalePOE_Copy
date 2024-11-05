@@ -10,6 +10,61 @@ namespace ACatsTalePOE
     //3Q2.2
     public class WarlockTile : EnemyTile
     {
-        
+        public WarlockTile(Position pos, int h = 10, int a = 5, Level l) : base(pos, h, a, l)
+        { }
+
+        // Override the Display property to return the specific character representing a Warlock
+        public override char Display
+        {
+            get
+            {
+                if (isDead())
+                {
+                    return 'X';//if the Warlock is killed this will represent them
+                }
+                return 'ᐂ';
+            }
+        }
+
+        public override bool getMove(out Tile tile)
+        {
+            tile = null;
+            return false;
+        }
+
+        public override CharacterTile[] GetTarget()
+        {
+            Tile[,] map = level.Map;
+            List<Tile> tiles = new List<Tile>();
+            int xOrig = getX();
+            int yOrig = getY();
+            int x, y;
+            x = xOrig + 1;
+            y = yOrig + 1;
+            for (int i = 0; i < 3; i++)
+            {
+                x = x - i;
+                for (int j = 0; j < 3; j++)
+                {
+                    y = y - j;
+
+                    if (map[x, y] is CharacterTile)
+                    {
+                        tiles.Add(map[x, y]);
+                    }
+                }
+            }
+            tiles.Remove(map[xOrig, yOrig]);
+            int size;
+            size = tiles.Count;
+
+            Tile[] tiles1 = tiles.ToArray();
+            CharacterTile[] characterTiles = new CharacterTile[size];
+            for (int i = 0; i < size; i++)
+            {
+                characterTiles[i] = (CharacterTile)tiles[i];
+            }
+            return characterTiles;
+        }
     }
 }
