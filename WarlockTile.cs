@@ -10,7 +10,7 @@ namespace ACatsTalePOE
     //3Q2.2
     public class WarlockTile : EnemyTile
     {
-        public WarlockTile(Position pos, int h = 10, int a = 5, Level l) : base(pos, h, a, l)
+        public WarlockTile(Position pos, Level l) : base(pos, 10, 5, l)
         { }
 
         // Override the Display property to return the specific character representing a Warlock

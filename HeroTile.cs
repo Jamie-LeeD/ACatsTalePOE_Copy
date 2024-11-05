@@ -9,10 +9,8 @@ namespace ACatsTalePOE
     //1Q4.2
     public class HeroTile : CharacterTile
     {
-        public HeroTile(Position pos, int h = 40, int a = 5) : base(pos, h, a)
+        public HeroTile(Position pos) : base(pos, 40, 5)
         {
-            //h = 40;
-            //a = 5;
         }
 
         public override char Display

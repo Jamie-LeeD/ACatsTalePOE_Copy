@@ -135,7 +135,7 @@ namespace ACatsTalePOE
                     tempTile = new ExitTile(pos); //Creates an ExitTile
                     break;
                 case TileType.Enemy:
-                    tempTile = new GruntTile(pos, 10, 1, this); //Creates an GruntTile,
+                    tempTile = new GruntTile(pos, this); //Creates an GruntTile,
                     break;
                 case TileType.Pickup:
                     tempTile = new HealthPickupTile(pos);//Creates a HealthPickupTile
@@ -171,7 +171,7 @@ namespace ACatsTalePOE
                     tempTile = new ExitTile(pos); //Creates an ExitTile
                     break;
                 case TileType.Enemy:
-                    tempTile = new GruntTile(pos, 10, 1, this); //Creates an GruntTile,
+                    tempTile = new GruntTile(pos, this); //Creates an GruntTile,
                     break;
                 case TileType.Pickup:
                     tempTile = new HealthPickupTile(pos);//Creates a HealthPickupTile
