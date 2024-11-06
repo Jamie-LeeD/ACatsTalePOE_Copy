@@ -41,25 +41,25 @@ namespace ACatsTalePOE
             heroY = heroTile.getY();
             tile = null;
             
-            if (heroX < tyrantX)
+            if (heroX < tyrantX && map[tyrantX - 1, tyrantY] is EmptyTile)
             {
                 tile = map[tyrantX - 1, tyrantY];
             }
             else
             {
-                if (heroX > tyrantX)
+                if (heroX > tyrantX && map[tyrantX + 1, tyrantY] is EmptyTile)
                 {
                     tile = map[tyrantX + 1, tyrantY];
                 }
                 else
                 {
-                    if(heroY < tyrantY)
+                    if(heroY < tyrantY && map[tyrantX, tyrantY - 1] is EmptyTile)
                     {
                         tile = map[tyrantX, tyrantY - 1];
                     }
                     else 
                     {
-                        if(heroY > tyrantY)
+                        if(heroY > tyrantY && map[tyrantX, tyrantY + 1] is EmptyTile)
                         {
                             tile = map[tyrantX, tyrantY + 1];
                         }
@@ -91,6 +91,7 @@ namespace ACatsTalePOE
                     tiles.Add(map[i, y]);
                 }
             }
+            tiles.Remove(map[x,y]);
             for (int i = 0; i < height; i++)
             {
                 if (map[x, i] is CharacterTile)
@@ -98,7 +99,7 @@ namespace ACatsTalePOE
                     tiles.Add(map[x, i]);
                 }
             }
-            tiles.Remove(map[x,y]);
+            tiles.Remove(map[x, y]);
 
             int size = tiles.Count;
             Tile[] tiles1 = new Tile[size];

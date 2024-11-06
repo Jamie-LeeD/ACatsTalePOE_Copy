@@ -14,6 +14,8 @@ namespace ACatsTalePOE
         private int maxHP;//max hit points
         private int aP;//attack points
         private Tile[] vision;
+        //3Q3.1
+        private int doubleDamageCount = 0;
         public CharacterTile(Position pos, int h, int a) : base(pos)
         {
             hP = h;
@@ -29,6 +31,13 @@ namespace ACatsTalePOE
         { return hP; }
         public int getMaxHP()
         { return maxHP; }
+
+        //3Q3.1
+        //Mutator
+        public void setDoubleDamage(int db)
+        {
+            doubleDamageCount = doubleDamageCount + db;
+        }
 
         //1Q4.1
         public void UpdateVision(Level lvl)
@@ -52,6 +61,12 @@ namespace ACatsTalePOE
 
         public void Attack(CharacterTile c)
         {
+            //3Q3.1
+            if(doubleDamageCount > 0)
+            {
+                c.takeDamage(aP);
+                doubleDamageCount = doubleDamageCount - 1;
+            }
             c.takeDamage(aP);
         }
 

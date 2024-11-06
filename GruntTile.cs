@@ -31,12 +31,13 @@ namespace ACatsTalePOE
 
         //2Q2.2
         //To check the if the grunt can move to that tile
+        Random rand = new Random();//random tile for enemy to go to
         public override bool getMove(out Tile tile)
         {
             bool clearPath = false;//To return a boolean if the tile is clear to move
             Tile[] vision = getVision();//This will get the vision of tiles around the character
             tile = null;//To get the tile that want to move to
-            Random rand = new Random();//random tile for enemy to go to
+            
             int moveTile = rand.Next(0, 4);//random number
             //for loop to check if there are any empty tiles in vision
             for (int i = 0; i < 4; i++)
