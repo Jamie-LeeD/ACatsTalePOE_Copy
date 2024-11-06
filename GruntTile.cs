@@ -25,7 +25,7 @@ namespace ACatsTalePOE
                 {
                     return 'X';//if the grunt is killed this will represent them
                 }
-                return 'Ϫ';
+                else return 'Ϫ';
             }
         }
 

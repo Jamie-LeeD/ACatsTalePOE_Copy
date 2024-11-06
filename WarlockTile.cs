@@ -22,7 +22,7 @@ namespace ACatsTalePOE
                 {
                     return 'X';//if the Warlock is killed this will represent them
                 }
-                return 'ᐂ';
+                else return 'ᐂ';
             }
         }
 

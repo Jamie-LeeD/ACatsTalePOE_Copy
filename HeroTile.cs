@@ -21,7 +21,7 @@ namespace ACatsTalePOE
                 {
                     return 'X';
                 }
-                return '▼';
+                else return '▼';
             }
         }
 

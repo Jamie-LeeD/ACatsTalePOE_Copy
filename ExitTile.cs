@@ -10,6 +10,8 @@ namespace ACatsTalePOE
     // ExitTile class inherits from the Tile class and represents an exit tile in the game
     public class ExitTile : Tile
     {
+        //Field
+        private bool doorLocked;
         // Constructor for the ExitTile, taking a Position object and passing it to the base class 
         public ExitTile(Position pos) : base(pos)
         {
@@ -18,7 +20,14 @@ namespace ACatsTalePOE
         // Override the Display property to return the specific character representing an exit
         public override char Display
         {
-            get { return '░'; }
+            get 
+            { 
+                if (doorLocked)
+                {
+                    return '▓';
+                }
+                else return '░'; 
+            }
         }
     }
 }

@@ -24,7 +24,7 @@ namespace ACatsTalePOE
                 {
                     return 'X';//if the tyrant is killed this will represent them
                 }
-                return '§';
+                else return '§';
             }
         }
 
