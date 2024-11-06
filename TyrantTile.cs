@@ -91,7 +91,7 @@ namespace ACatsTalePOE
                     tiles.Add(map[i, y]);
                 }
             }
-            for (int i = 0; x < height; i++)
+            for (int i = 0; i < height; i++)
             {
                 if (map[x, i] is CharacterTile)
                 {

@@ -234,16 +234,20 @@ namespace ACatsTalePOE
         public void EnemiesAttack()//Method for enemy to retaliate
         {
             EnemyTile[] enemyTiles = currentLvl.GetEnemyTiles();//gets array of enemies
+            CharacterTile[] characterTile;
             for (int i = 0; i < noOfCurrentLvl; i++) //will repeat for how many enemies there are
             {
-                if (!enemyTiles[i].isDead())//checks if the enemy tile is dead
+                if (!enemyTiles[i].isDead())//checks if the enemy tile is not dead
                 {
-                    CharacterTile[] characterTile;
                     characterTile = enemyTiles[i].GetTarget();
-                    if (characterTile[0] is HeroTile)
+                    for(int j = 0; j < characterTile.Length; j++) 
                     {
-                        enemyTiles[i].Attack(characterTile[0]);//attacks enemy tile
+                        if (characterTile[j] is CharacterTile)
+                        {
+                            enemyTiles[i].Attack(characterTile[j]);//attacks enemy tile
+                        }
                     }
+                    
 
                 }
             }

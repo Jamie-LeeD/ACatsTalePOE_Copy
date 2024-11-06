@@ -22,6 +22,8 @@ namespace ACatsTalePOE
         private EnemyTile[] enemyTiles;
         //2Q4.3
         private PickupTile[] pickupTiles;
+        //3Q
+        Random random = new Random();//New instance of Random for generating random numbers
 
         //Constructor 
         public Level(int w, int h, int noOfEnemy, int noOfPickup, HeroTile ht = null)
@@ -60,7 +62,7 @@ namespace ACatsTalePOE
             for (int i = 0; i < noOfEnemy; i++)//Creates the number of Enemies specified
             {
                 pos = getRandomEmptyPosition();//Finding a random empty position on the map for enemies
-                enemyTiles[i] =(GruntTile) CreateTile(TileType.Enemy, pos);//new tile of type grunt at the same position
+                enemyTiles[i] = (EnemyTile) CreateTile(TileType.Enemy, pos);//new tile of type grunt at the same position
             }
 
 
@@ -135,7 +137,7 @@ namespace ACatsTalePOE
                     tempTile = new ExitTile(pos); //Creates an ExitTile
                     break;
                 case TileType.Enemy:
-                    tempTile = new GruntTile(pos, this); //Creates an GruntTile,
+                    tempTile = CreateEnemyTile(pos); //Creates an GruntTile,
                     break;
                 case TileType.Pickup:
                     tempTile = new HealthPickupTile(pos);//Creates a HealthPickupTile
@@ -171,7 +173,7 @@ namespace ACatsTalePOE
                     tempTile = new ExitTile(pos); //Creates an ExitTile
                     break;
                 case TileType.Enemy:
-                    tempTile = new GruntTile(pos, this); //Creates an GruntTile,
+                    tempTile = CreateEnemyTile(pos); //Creates an GruntTile,
                     break;
                 case TileType.Pickup:
                     tempTile = new HealthPickupTile(pos);//Creates a HealthPickupTile
@@ -220,7 +222,6 @@ namespace ACatsTalePOE
         //1Q4.2
         private Position getRandomEmptyPosition()
         {
-            Random random = new Random();//New instance of Random for generating random numbers
             //Initializing xPos and yPos with starting values, though they will be updated in the loop
             int xPos = 1;
             int yPos = 1;
@@ -277,6 +278,28 @@ namespace ACatsTalePOE
             {
                 enemyTiles[i].UpdateVision(this);//will update the enemies vision
             }
+        }
+
+        //3Q2.4
+        private EnemyTile CreateEnemyTile(Position pos)
+        {
+            EnemyTile enemyTile;
+            
+            int chance = random.Next(0, 100);
+
+            if (chance < 50)
+            {
+                enemyTile = new GruntTile(pos, this);
+            }
+            else if (chance < 80)
+            {
+                enemyTile = new WarlockTile(pos, this);
+            }
+            else
+            {
+                enemyTile = new TyrantTile(pos, this);
+            }
+            return enemyTile;
         }
 
         //1Q4.3
