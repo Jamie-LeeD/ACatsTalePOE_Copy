@@ -244,7 +244,7 @@ namespace ACatsTalePOE
                     {
                         if (characterTile[j] is CharacterTile)
                         {
-                            enemyTiles[i].Attack(characterTile[j]);//attacks enemy tile
+                            enemyTiles[i].Attack(characterTile[j]);//Enemy attacks charactertile
                         }
                     }
                     

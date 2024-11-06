@@ -40,19 +40,18 @@ namespace ACatsTalePOE
             int yOrig = getY();
             int x, y;
             x = xOrig + 1;
-            y = yOrig + 1;
             for (int i = 0; i < 3; i++)
             {
-                x = x - i;
+                y = yOrig + 1;
                 for (int j = 0; j < 3; j++)
                 {
-                    y = y - j;
-
                     if (map[x, y] is CharacterTile)
                     {
                         tiles.Add(map[x, y]);
                     }
+                    y--;
                 }
+                x--;
             }
             tiles.Remove(map[xOrig, yOrig]);
             int size;
