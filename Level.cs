@@ -308,7 +308,7 @@ namespace ACatsTalePOE
             PickupTile pickupTile;
             int chance = random.Next(0, 3);
 
-            if (chance < 3)
+            if (chance < 2)
             {
                 pickupTile = new HealthPickupTile(pos);
             }
