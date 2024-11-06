@@ -105,19 +105,26 @@ namespace ACatsTalePOE
                 //1Q5.2
                 if (targetTile is ExitTile)//For the appropriate action when a character enteracts with the exit
                 {
-                    if (noOfCurrentLvl != noOfLvl)//makes sure to create a new level if there is still Levels to go
+                    //3Q4.3
+                    ExitTile exitTile = currentLvl.GetExitTile();
+                    if(exitTile.DoorLocked == false)
                     {
-                        clearPath = true;//for return
-                        NextLevel();//Sets up the new map
-                    }
-                    else
-                    {
-                        if (noOfCurrentLvl == noOfLvl)//If the character has finished all the levels
+                        //1Q5.2
+                        if (noOfCurrentLvl != noOfLvl)//makes sure to create a new level if there is still Levels to go
                         {
-                            clearPath = false;//for return
-                            gameState = GameState.Complete;//changes game state
+                            clearPath = true;//for return
+                            NextLevel();//Sets up the new map
+                        }
+                        else
+                        {
+                            if (noOfCurrentLvl == noOfLvl)//If the character has finished all the levels
+                            {
+                                clearPath = false;//for return
+                                gameState = GameState.Complete;//changes game state
+                            }
                         }
                     }
+                    
                 }
             }
 
@@ -220,6 +227,8 @@ namespace ACatsTalePOE
                 if (HeroAttack(direction))//gets the direction the hero is attacking
                 {
                     EnemiesAttack();//Enemy attacks back
+                    //3Q4.3
+                    currentLvl.UpdateExit();
                     //2Q3.3
                     if (heroTile.isDead())//checks if hero is dead
                     {
@@ -273,7 +282,10 @@ namespace ACatsTalePOE
             heroTile = currentLvl.GetHeroTile();
             hP = heroTile.getHitPoint();
             maxHP = heroTile.getMaxHP();
-
+            if (hP <=0)
+            {
+                hP = 0;
+            }
             temp = temp + "STATS:\n";
             temp = temp + hP + "/";
             temp = temp + maxHP;
