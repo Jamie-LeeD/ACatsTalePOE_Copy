@@ -319,6 +319,26 @@ namespace ACatsTalePOE
             return pickupTile;
         }
 
+        //3Q4.2
+        public void UpdateExit()
+        {
+            int noOfEnemy;
+            int count = 0;
+            noOfEnemy = enemyTiles.Length;
+
+            for (int i = 0; i < noOfEnemy; i++) 
+            {
+                if (enemyTiles[i].isDead()) 
+                {
+                    count++;
+                }
+            }
+            if (count == noOfEnemy)
+            {
+                exitTile.DoorLocked = false;
+            }
+        }
+
         //1Q4.3
         //Override ToString to provide visual representation of the level
         public override String ToString()
