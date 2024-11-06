@@ -70,7 +70,7 @@ namespace ACatsTalePOE
             for (int i = 0; i < noOfPickup; i++)//Creates the number of pickups specified
             {
                 pos = getRandomEmptyPosition();//Finding a random empty position on the map for pickups
-                pickupTiles[i] = (HealthPickupTile) CreateTile(TileType.Pickup, pos);// New Health at the random position
+                pickupTiles[i] = (PickupTile) CreateTile(TileType.Pickup, pos);// New Health at the random position
             }
         }
         //Accessor Methods
@@ -140,7 +140,7 @@ namespace ACatsTalePOE
                     tempTile = CreateEnemyTile(pos); //Creates an GruntTile,
                     break;
                 case TileType.Pickup:
-                    tempTile = new HealthPickupTile(pos);//Creates a HealthPickupTile
+                    tempTile = CreatePickupTile(pos);//Creates a HealthPickupTile
                     break;
             }
 
@@ -176,7 +176,7 @@ namespace ACatsTalePOE
                     tempTile = CreateEnemyTile(pos); //Creates an GruntTile,
                     break;
                 case TileType.Pickup:
-                    tempTile = new HealthPickupTile(pos);//Creates a HealthPickupTile
+                    tempTile = CreatePickupTile(pos);//Creates a HealthPickupTile
                     break;
             }
 
@@ -300,6 +300,23 @@ namespace ACatsTalePOE
                 enemyTile = new TyrantTile(pos, this);
             }
             return enemyTile;
+        }
+
+        //3Q3.3
+        private PickupTile CreatePickupTile(Position pos)
+        {
+            PickupTile pickupTile;
+            int chance = random.Next(0, 3);
+
+            if (chance < 3)
+            {
+                pickupTile = new HealthPickupTile(pos);
+            }
+            else 
+            {
+                pickupTile = new AttackBuffPickupTile(pos);
+            }
+            return pickupTile;
         }
 
         //1Q4.3
