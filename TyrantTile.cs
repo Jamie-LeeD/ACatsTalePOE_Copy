@@ -102,7 +102,7 @@ namespace ACatsTalePOE
             tiles.Remove(map[x, y]);
 
             int size = tiles.Count;
-            Tile[] tiles1 = new Tile[size];
+            Tile[] tiles1 = tiles.ToArray();
             CharacterTile[] characterTile = new CharacterTile[size];
             for (int i = 0;i < size;i++)
             {
