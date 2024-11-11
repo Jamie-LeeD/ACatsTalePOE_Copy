@@ -293,6 +293,11 @@ namespace ACatsTalePOE
             return temp;
         }
 
+        public void SaveGame()
+        {
+            GameSaveData gameSaveData = new GameSaveData(noOfLvl, noOfCurrentLvl, currentLvl);
+        }
+
         //Tostring to show what the map looks like for the end user
         public String toString()
         {
