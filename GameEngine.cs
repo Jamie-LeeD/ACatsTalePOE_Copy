@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ACatsTalePOE
 {
@@ -294,7 +295,7 @@ namespace ACatsTalePOE
 
             return temp;
         }
-
+        //3Q5.1
         public void SaveGame()
         {
             GameSaveData gameSaveData = new GameSaveData(noOfLvl, noOfCurrentLvl, currentLvl);
@@ -303,6 +304,35 @@ namespace ACatsTalePOE
             using (FileStream fileStream = new FileStream("GameSaveData.sav", FileMode.Create))
             {
                 formatter.Serialize(fileStream, gameSaveData);
+            }
+        }
+
+        //3Q5.2
+        public void LoadGame()
+        {
+            
+            try
+            {
+                // Open the saved file and deserialize the GameSaveData object
+                BinaryFormatter formatter = new BinaryFormatter();
+                using (FileStream fileStream = new FileStream("GameSaveData.sav", FileMode.Open))
+                {
+                    // Deserialize the data into a GameSaveData object
+                    GameSaveData gameSaveData = (GameSaveData)formatter.Deserialize(fileStream);
+
+                    // Restore the game state from saveData
+                    noOfLvl = gameSaveData.noOfLevel;
+                    noOfCurrentLvl = gameSaveData.cLevel;
+                    currentLvl = gameSaveData.level;
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("No save file found. Please save the game first.", "Load Error");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to load game: {ex.Message}", "Load Error");
             }
         }
 

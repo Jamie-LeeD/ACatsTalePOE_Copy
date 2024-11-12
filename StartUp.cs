@@ -79,5 +79,10 @@ namespace ACatsTalePOE
                 bg.Dispose();
             }
         }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

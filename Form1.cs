@@ -107,6 +107,11 @@ namespace ACatsTalePOE
                 bg.Dispose();
             }
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            gameEngine.SaveGame();
+        }
     }
 }
 

@@ -33,6 +33,7 @@
             this.lblLevel = new System.Windows.Forms.Label();
             this.btnInfo = new System.Windows.Forms.Button();
             this.lblHeroStats = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDisplay
@@ -74,11 +75,23 @@
             // 
             this.lblHeroStats.AutoSize = true;
             this.lblHeroStats.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeroStats.Location = new System.Drawing.Point(484, 117);
+            this.lblHeroStats.Location = new System.Drawing.Point(479, 175);
             this.lblHeroStats.Name = "lblHeroStats";
             this.lblHeroStats.Size = new System.Drawing.Size(117, 38);
             this.lblHeroStats.TabIndex = 5;
             this.lblHeroStats.Text = "label1";
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.LightPink;
+            this.btnSave.Font = new System.Drawing.Font("Cooper Black", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(486, 448);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(164, 72);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // fCatTale
             // 
@@ -87,6 +100,7 @@
             this.BackColor = System.Drawing.Color.LightBlue;
             this.BackgroundImage = global::ACatsTalePOE.Properties.Resources.BlueBackground;
             this.ClientSize = new System.Drawing.Size(751, 839);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblHeroStats);
             this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.lblLevel);
@@ -108,6 +122,7 @@
         private System.Windows.Forms.Label lblLevel;
         private System.Windows.Forms.Button btnInfo;
         private System.Windows.Forms.Label lblHeroStats;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 

@@ -10,13 +10,13 @@ namespace ACatsTalePOE
     public class GameSaveData
     {
         public int noOfLevel;
-        public int currentLevel;
+        public int cLevel;
         public Level level;
 
         public GameSaveData(int noLvl, int cLvl, Level lvl)
         {
             noOfLevel = noLvl;
-            currentLevel = cLvl;
+            cLevel = cLvl;
             level = lvl;
         }
     }
