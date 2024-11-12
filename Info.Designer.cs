@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Info));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabKey = new System.Windows.Forms.TabPage();
-            this.tabControl = new System.Windows.Forms.TabPage();
-            this.lblGeneral = new System.Windows.Forms.Label();
-            this.lblEnemies = new System.Windows.Forms.Label();
             this.lblPickUp = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblEnemies = new System.Windows.Forms.Label();
+            this.lblGeneral = new System.Windows.Forms.Label();
+            this.tabControl = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabKey.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -67,17 +67,28 @@
             this.tabKey.TabIndex = 0;
             this.tabKey.Text = "KEY";
             // 
-            // tabControl
+            // lblPickUp
             // 
-            this.tabControl.BackColor = System.Drawing.Color.SteelBlue;
-            this.tabControl.Controls.Add(this.label1);
-            this.tabControl.Controls.Add(this.label2);
-            this.tabControl.Location = new System.Drawing.Point(4, 40);
-            this.tabControl.Name = "tabControl";
-            this.tabControl.Padding = new System.Windows.Forms.Padding(3);
-            this.tabControl.Size = new System.Drawing.Size(883, 487);
-            this.tabControl.TabIndex = 1;
-            this.tabControl.Text = "CONTROLS";
+            this.lblPickUp.AutoSize = true;
+            this.lblPickUp.BackColor = System.Drawing.Color.LightPink;
+            this.lblPickUp.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPickUp.Location = new System.Drawing.Point(17, 503);
+            this.lblPickUp.Name = "lblPickUp";
+            this.lblPickUp.Size = new System.Drawing.Size(465, 130);
+            this.lblPickUp.TabIndex = 10;
+            this.lblPickUp.Text = "PICKUP:\r\n♥ = Health Potions\r\n      |Restores 10HP.|\r\n* = Attack buff\r\n     |Doubl" +
+    "es ATK power for 3 attacks.|";
+            // 
+            // lblEnemies
+            // 
+            this.lblEnemies.AutoSize = true;
+            this.lblEnemies.BackColor = System.Drawing.Color.LightPink;
+            this.lblEnemies.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnemies.Location = new System.Drawing.Point(17, 233);
+            this.lblEnemies.Name = "lblEnemies";
+            this.lblEnemies.Size = new System.Drawing.Size(639, 260);
+            this.lblEnemies.TabIndex = 9;
+            this.lblEnemies.Text = resources.GetString("lblEnemies.Text");
             // 
             // lblGeneral
             // 
@@ -92,51 +103,40 @@
     "\n       |All enemies have to be defeat to unlock the exit.|\r\n█ = Wall\r\n       |Y" +
     "ou cannot move past the walls.|";
             // 
-            // lblEnemies
+            // tabControl
             // 
-            this.lblEnemies.AutoSize = true;
-            this.lblEnemies.BackColor = System.Drawing.Color.LightPink;
-            this.lblEnemies.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnemies.Location = new System.Drawing.Point(17, 233);
-            this.lblEnemies.Name = "lblEnemies";
-            this.lblEnemies.Size = new System.Drawing.Size(639, 260);
-            this.lblEnemies.TabIndex = 9;
-            this.lblEnemies.Text = resources.GetString("lblEnemies.Text");
-            // 
-            // lblPickUp
-            // 
-            this.lblPickUp.AutoSize = true;
-            this.lblPickUp.BackColor = System.Drawing.Color.LightPink;
-            this.lblPickUp.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPickUp.Location = new System.Drawing.Point(17, 503);
-            this.lblPickUp.Name = "lblPickUp";
-            this.lblPickUp.Size = new System.Drawing.Size(465, 130);
-            this.lblPickUp.TabIndex = 10;
-            this.lblPickUp.Text = "PICKUP:\r\n♥ = Health Potions\r\n      |Restores 10HP.|\r\n* = Attack buff\r\n     |Doubl" +
-    "es ATK power for 3 attacks.|";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightPink;
-            this.label2.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(62, 96);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(314, 195);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "MOVE:\r\nW - Move Up         \r\nD - Move Right     \r\nS - Move Down     \r\nA - Move Le" +
-    "ft        \r\n";
+            this.tabControl.BackColor = System.Drawing.Color.SteelBlue;
+            this.tabControl.Controls.Add(this.label1);
+            this.tabControl.Controls.Add(this.label2);
+            this.tabControl.Location = new System.Drawing.Point(4, 40);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.Padding = new System.Windows.Forms.Padding(3);
+            this.tabControl.Size = new System.Drawing.Size(883, 487);
+            this.tabControl.TabIndex = 1;
+            this.tabControl.Text = "CONTROLS";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.LightPink;
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(490, 96);
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(454, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(308, 195);
+            this.label1.Size = new System.Drawing.Size(395, 250);
             this.label1.TabIndex = 10;
             this.label1.Text = "ATTACK:\r\nI - Attack Up \r\nL - Attack Right\r\nK - Attack Down\r\nJ - Attack Left\r\n";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.LightPink;
+            this.label2.Font = new System.Drawing.Font("Cooper Black", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(402, 250);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "MOVE:\r\nW - Move Up         \r\nD - Move Right     \r\nS - Move Down     \r\nA - Move Le" +
+    "ft        \r\n";
             // 
             // Info
             // 

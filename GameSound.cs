@@ -12,18 +12,21 @@ namespace ACatsTalePOE
         private SoundPlayer titleTheme;
         private SoundPlayer swoosh;
         private SoundPlayer victory;
-        private SoundPlayer lose;
+        private SoundPlayer loseTune;
+        private SoundPlayer loseJingle;
 
         public GameSound()
         {
             titleTheme = new SoundPlayer();
             swoosh = new SoundPlayer();
             victory = new SoundPlayer();
-            lose = new SoundPlayer();
+            loseTune = new SoundPlayer();
+            loseJingle = new SoundPlayer();
             titleTheme.SoundLocation = "TitleTheme.wav";
             swoosh.SoundLocation = "swoosh.wav";
             victory.SoundLocation = "congrats.wav";
-            lose.SoundLocation = "lose.wav";
+            loseTune.SoundLocation = "loseTune.wav";
+            loseJingle.SoundLocation = "loseJingle.wav";
         }
 
         public void playTitleTheme()
@@ -39,10 +42,10 @@ namespace ACatsTalePOE
         {
             victory.Play();
         }
-        
-        public void playLose()
+
+        public void playLoseTune()
         {
-            lose.Play();
+            loseTune.Play();
         }
 
         public void stopTitleTheme()

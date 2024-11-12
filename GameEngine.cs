@@ -153,6 +153,7 @@ namespace ACatsTalePOE
                     MoveEnemies();
                 }
             }
+            
         }
 
         //1Q5.2
@@ -240,11 +241,12 @@ namespace ACatsTalePOE
                     //2Q3.3
                     if (heroTile.isDead())//checks if hero is dead
                     {
-                        gameSound.playLose();
+                        gameSound.playLoseTune();
                         gameState = GameState.GameOver;//To change state to game over
                     }
                 }
             }
+
         }
 
         //2Q3.2
@@ -354,7 +356,8 @@ namespace ACatsTalePOE
                 temp = "Game has been completed.\nWell Done";
             }
             if (gameState == GameState.GameOver)//If the end user failed
-            { 
+            {
+                
                 temp = "GAME OVER\nYou Died";
             }
             return temp;

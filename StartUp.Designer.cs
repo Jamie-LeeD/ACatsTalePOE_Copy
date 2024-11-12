@@ -53,7 +53,7 @@
             this.btnPlay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnPlay.Font = new System.Drawing.Font("Cooper Black", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlay.Image = global::ACatsTalePOE.Properties.Resources.BlueBackground;
-            this.btnPlay.Location = new System.Drawing.Point(79, 271);
+            this.btnPlay.Location = new System.Drawing.Point(54, 288);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(295, 84);
             this.btnPlay.TabIndex = 6;
@@ -80,7 +80,7 @@
             this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLoad.Font = new System.Drawing.Font("Cooper Black", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoad.Image = global::ACatsTalePOE.Properties.Resources.BlueBackground;
-            this.btnLoad.Location = new System.Drawing.Point(79, 378);
+            this.btnLoad.Location = new System.Drawing.Point(54, 378);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(295, 84);
             this.btnLoad.TabIndex = 8;

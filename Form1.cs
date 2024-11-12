@@ -19,7 +19,7 @@ namespace ACatsTalePOE
         public fCatTale(bool load)
         {
             
-            gameEngine = new GameEngine(1);  //Initializing the game engine with a size of 10
+            gameEngine = new GameEngine(10);  //Initializing the game engine with a size of 10
             if (load) 
             {
                 gameEngine.LoadGame();

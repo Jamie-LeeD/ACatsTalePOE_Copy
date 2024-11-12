@@ -39,6 +39,7 @@
             // 
             // lblDisplay
             // 
+            this.lblDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblDisplay.BackColor = System.Drawing.Color.LightBlue;
             this.lblDisplay.Font = new System.Drawing.Font("Consolas", 18F);
             this.lblDisplay.Location = new System.Drawing.Point(13, 68);
@@ -51,6 +52,7 @@
             // 
             // lblLevel
             // 
+            this.lblLevel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblLevel.AutoSize = true;
             this.lblLevel.BackColor = System.Drawing.Color.LightPink;
             this.lblLevel.Font = new System.Drawing.Font("Cooper Black", 18F);
@@ -62,6 +64,7 @@
             // 
             // btnInfo
             // 
+            this.btnInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnInfo.BackColor = System.Drawing.Color.LightPink;
             this.btnInfo.Font = new System.Drawing.Font("Cooper Black", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInfo.Location = new System.Drawing.Point(649, 32);
@@ -74,6 +77,7 @@
             // 
             // lblHeroStats
             // 
+            this.lblHeroStats.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblHeroStats.AutoSize = true;
             this.lblHeroStats.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeroStats.Location = new System.Drawing.Point(479, 175);
@@ -84,6 +88,7 @@
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSave.BackColor = System.Drawing.Color.LightPink;
             this.btnSave.Font = new System.Drawing.Font("Cooper Black", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(486, 621);
@@ -96,6 +101,7 @@
             // 
             // btnReturn
             // 
+            this.btnReturn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnReturn.BackColor = System.Drawing.Color.LightPink;
             this.btnReturn.Font = new System.Drawing.Font("Cooper Black", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.Location = new System.Drawing.Point(486, 699);
