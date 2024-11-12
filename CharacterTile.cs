@@ -16,13 +16,14 @@ namespace ACatsTalePOE
         private int aP;//attack points
         private Tile[] vision;
         //3Q3.1
-        private int doubleDamageCount = 0;
+        private int doubleDamageCount = 0;//How many attacks will have double the power
+        
+        //Constructor
         public CharacterTile(Position pos, int h, int a) : base(pos)
         {
             hP = h;
             maxHP = h;
             aP = a;
-
             vision = new Tile[4];
         }
 
@@ -37,7 +38,7 @@ namespace ACatsTalePOE
         //Mutator
         public void setDoubleDamage(int db)
         {
-            doubleDamageCount = doubleDamageCount + db;
+            doubleDamageCount = doubleDamageCount + db; //To stack double damage
         }
 
         //1Q4.1
