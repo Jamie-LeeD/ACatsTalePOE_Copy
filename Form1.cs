@@ -15,11 +15,11 @@ namespace ACatsTalePOE
     public partial class fCatTale : Form
     {
         private GameEngine gameEngine; //Game engine instance responsible for game logic
-
         //Constructor for the form
         public fCatTale(bool load)
         {
-            gameEngine = new GameEngine(10);  //Initializing the game engine with a size of 10
+            
+            gameEngine = new GameEngine(1);  //Initializing the game engine with a size of 10
             if (load) 
             {
                 gameEngine.LoadGame();
@@ -115,6 +115,21 @@ namespace ACatsTalePOE
         private void btnSave_Click(object sender, EventArgs e)
         {
             gameEngine.SaveGame();
+            MessageBox.Show("Game has been saved");
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult;
+            dialogResult = MessageBox.Show("Unsaved progress will be lost.\nDo you want to continue with this action?", "Return to title?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Hide();
+                StartUp startUp = new StartUp();
+                startUp.Closed += (s, args) => this.Close();
+                startUp.Show();
+            }
+            
         }
     }
 }

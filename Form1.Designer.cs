@@ -34,6 +34,7 @@
             this.btnInfo = new System.Windows.Forms.Button();
             this.lblHeroStats = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDisplay
@@ -84,14 +85,26 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.LightPink;
-            this.btnSave.Font = new System.Drawing.Font("Cooper Black", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(486, 448);
+            this.btnSave.Font = new System.Drawing.Font("Cooper Black", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(486, 621);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(164, 72);
+            this.btnSave.Size = new System.Drawing.Size(245, 72);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.BackColor = System.Drawing.Color.LightPink;
+            this.btnReturn.Font = new System.Drawing.Font("Cooper Black", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.Location = new System.Drawing.Point(486, 699);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(245, 96);
+            this.btnReturn.TabIndex = 7;
+            this.btnReturn.Text = "Return to Title";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // fCatTale
             // 
@@ -100,6 +113,7 @@
             this.BackColor = System.Drawing.Color.LightBlue;
             this.BackgroundImage = global::ACatsTalePOE.Properties.Resources.BlueBackground;
             this.ClientSize = new System.Drawing.Size(751, 839);
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblHeroStats);
             this.Controls.Add(this.btnInfo);
@@ -123,6 +137,7 @@
         private System.Windows.Forms.Button btnInfo;
         private System.Windows.Forms.Label lblHeroStats;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnReturn;
     }
 }
 

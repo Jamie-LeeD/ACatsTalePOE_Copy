@@ -66,11 +66,11 @@ namespace ACatsTalePOE
                     characterTiles[size] = (CharacterTile)vision[i];//saves characters in array
                     size++;
                 }
-                if (vision[i] is EnemyTile)
-                {
-                    characterTiles[size] = (CharacterTile)vision[i];//saves characters in array
-                    size++;
-                }
+                //if (vision[i] is EnemyTile)
+                //{
+                //    characterTiles[size] = (CharacterTile)vision[i];//saves characters in array
+                //    size++;
+                //}
             }
             return characterTiles;
         }

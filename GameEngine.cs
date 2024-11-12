@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace ACatsTalePOE
 {
+    
     //1Q4.3
     //Enum representing possible movement directions for the hero 
     public enum Direction // (Worachote, 2024)
@@ -31,6 +32,8 @@ namespace ACatsTalePOE
     }
     public class GameEngine
     {
+        private GameSound gameSound = new GameSound();
+
         private Level currentLvl; //Represents the current level in the game
         private int noOfLvl; //Stores the total number of game's levels
         private Random ranNo; //Generating random numbers for level dimensions
@@ -122,6 +125,7 @@ namespace ACatsTalePOE
                         {
                             if (noOfCurrentLvl == noOfLvl)//If the character has finished all the levels
                             {
+                                gameSound.playVictory();
                                 clearPath = false;//for return
                                 gameState = GameState.Complete;//changes game state
                             }
@@ -229,12 +233,14 @@ namespace ACatsTalePOE
                 //2Q3.2
                 if (HeroAttack(direction))//gets the direction the hero is attacking
                 {
+                    gameSound.playSwoosh();
                     EnemiesAttack();//Enemy attacks back
                     //3Q4.3
                     currentLvl.UpdateExit();
                     //2Q3.3
                     if (heroTile.isDead())//checks if hero is dead
                     {
+                        gameSound.playLose();
                         gameState = GameState.GameOver;//To change state to game over
                     }
                 }
@@ -348,7 +354,7 @@ namespace ACatsTalePOE
                 temp = "Game has been completed.\nWell Done";
             }
             if (gameState == GameState.GameOver)//If the end user failed
-            {
+            { 
                 temp = "GAME OVER\nYou Died";
             }
             return temp;

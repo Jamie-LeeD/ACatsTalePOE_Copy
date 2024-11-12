@@ -13,14 +13,14 @@ namespace ACatsTalePOE
 {
     public partial class StartUp : Form
     {
+        private GameSound sound = new GameSound();
         private Timer hover;
         private int hoverDirection = 1;
         private int hoverSpeed = 2;
         public StartUp()
         {
-
             InitializeComponent();
-
+            sound.playTitleTheme();
             hover = new Timer();
             hover.Interval = 100;
             hover.Tick += new EventHandler(HoverTimer_Tick);
@@ -41,6 +41,7 @@ namespace ACatsTalePOE
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
+            sound.stopTitleTheme();
             this.Hide();
             fCatTale fCatTale = new fCatTale(false);
             fCatTale.Closed += (s, args) => this.Close();
@@ -83,16 +84,23 @@ namespace ACatsTalePOE
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            if (Directory.Exists("GameSaveData.sav"))
+            try
             {
+                using (FileStream fileStream = new FileStream("GameSaveData.sav", FileMode.Open)) 
+                { }
+                sound.stopTitleTheme();
                 this.Hide();
                 fCatTale fCatTale = new fCatTale(true);
                 fCatTale.Closed += (s, args) => this.Close();
                 fCatTale.Show();
             }
-            else
+            catch (FileNotFoundException)
             {
-                MessageBox.Show("No save file found. Please save the game first.", "Load Error");
+                MessageBox.Show("You have not started a game yet, please slecet start new game.", "Load Game");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to load game: {ex.Message}", "Load Error");
             }
         }
     }

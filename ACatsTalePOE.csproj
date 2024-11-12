@@ -59,6 +59,7 @@
     </Compile>
     <Compile Include="GameEngine.cs" />
     <Compile Include="GameSaveData.cs" />
+    <Compile Include="GameSound.cs" />
     <Compile Include="GruntTile.cs" />
     <Compile Include="HealthPickupTile.cs" />
     <Compile Include="HeroTile.cs" />

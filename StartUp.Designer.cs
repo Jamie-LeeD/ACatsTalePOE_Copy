@@ -84,7 +84,7 @@
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(295, 84);
             this.btnLoad.TabIndex = 8;
-            this.btnLoad.Text = "Load Game";
+            this.btnLoad.Text = "Continue";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 

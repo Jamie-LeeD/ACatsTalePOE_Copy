@@ -10,9 +10,11 @@ namespace ACatsTalePOE
     public class AttackBuffPickupTile : PickupTile
     {
         //3Q3.2
+        //Constructor
         public AttackBuffPickupTile(Position pos) : base(pos)
         { }
 
+        //Overrides the apply affect to attack buff to HeroTile
         public override void ApplyEffect(CharacterTile characterTile)
         {
             characterTile.setDoubleDamage(3);
