@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACatsTalePOE
 {
+    [Serializable]
     //1Q4.1
     public abstract class CharacterTile : Tile
     {

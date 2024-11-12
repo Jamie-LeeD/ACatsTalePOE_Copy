@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACatsTalePOE
 {
+    [Serializable]
     //1Q3.1
     // WallTile class inherits from the Tile class and represents a wall tile in the game
     public class WallTile : Tile

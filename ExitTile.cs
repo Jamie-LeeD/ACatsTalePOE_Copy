@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACatsTalePOE
 {
+    [Serializable]
     //1Q5.1 
     // ExitTile class inherits from the Tile class and represents an exit tile in the game
     public class ExitTile : Tile

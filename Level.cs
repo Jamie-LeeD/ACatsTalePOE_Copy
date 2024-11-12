@@ -8,6 +8,7 @@ using System.Windows.Forms;
 namespace ACatsTalePOE
 {
     // 1Q2.4 Creating level class
+    [Serializable]
     public class Level
     {
         //Fields

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACatsTalePOE
 {
+    [Serializable]
     //2Q2.1
     public abstract class EnemyTile : CharacterTile
     {

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACatsTalePOE
 {
+    [Serializable]
     //1Q2.3
     public class EmptyTile : Tile//extends from parent class
     {

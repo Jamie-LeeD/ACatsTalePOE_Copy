@@ -117,25 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblGuide.Text" xml:space="preserve">
-    <value>KEY:
-▼ = You
-█ = Wall
-░ = Exit
+  <data name="label3.Text" xml:space="preserve">
+    <value>ENEMIES:
 Ϫ = Grunts
-♥ = Health Potions
-
-CONTROLS:
-W - Move Up         I - Attack Up 
-D - Move Right     L - Attack Right
-S - Move Down     K - Attack Down
-A - Move Left        J - Attack Left
-
-
-RULES:
--Your goal is to get to the Exit.
--You can not pass through walls.
--Defeat enemies in your way.</value>
+      |HP: 10 |ATK: 1 |
+      |Attacks up, down, left and right. |Attack Hero|
+ᐂ = Warlock
+      |HP: 10 |ATK: 5 |
+      |Attacks all around itself. |Attacks all|
+§ = Tyrant
+      |HP: 15 |ATK: 5 |
+      |Attacks vetically and horizonatally. |Attacks all|
+</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

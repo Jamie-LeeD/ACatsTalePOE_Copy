@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace ACatsTalePOE
 {
+    [Serializable]
     //1Q4.2
     public class HeroTile : CharacterTile
     {
+        
         public HeroTile(Position pos) : base(pos, 40, 5)
         {
         }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACatsTalePOE
 {
+    [Serializable]
     public class AttackBuffPickupTile : PickupTile
     {
         //3Q3.2

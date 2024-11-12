@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACatsTalePOE
 {
+    [Serializable]
     //2Q4.2
     public class HealthPickupTile : PickupTile
     {

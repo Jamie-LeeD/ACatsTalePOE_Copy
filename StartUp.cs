@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,7 +42,7 @@ namespace ACatsTalePOE
         private void btnPlay_Click(object sender, EventArgs e)
         {
             this.Hide();
-            fCatTale fCatTale = new fCatTale();
+            fCatTale fCatTale = new fCatTale(false);
             fCatTale.Closed += (s, args) => this.Close();
             fCatTale.Show();
         }
@@ -82,7 +83,17 @@ namespace ACatsTalePOE
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-
+            if (Directory.Exists("GameSaveData.sav"))
+            {
+                this.Hide();
+                fCatTale fCatTale = new fCatTale(true);
+                fCatTale.Closed += (s, args) => this.Close();
+                fCatTale.Show();
+            }
+            else
+            {
+                MessageBox.Show("No save file found. Please save the game first.", "Load Error");
+            }
         }
     }
 }

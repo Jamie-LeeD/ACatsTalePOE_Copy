@@ -17,9 +17,13 @@ namespace ACatsTalePOE
         private GameEngine gameEngine; //Game engine instance responsible for game logic
 
         //Constructor for the form
-        public fCatTale()
+        public fCatTale(bool load)
         {
             gameEngine = new GameEngine(10);  //Initializing the game engine with a size of 10
+            if (load) 
+            {
+                gameEngine.LoadGame();
+            }
             InitializeComponent(); //Initializing the form components (UI elements)
             UpdateDisplay(); //// Updating the display with the current game state
             this.KeyPreview = true;//To focus of key input and not the button
