@@ -1,7 +1,9 @@
 ﻿using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -296,6 +298,12 @@ namespace ACatsTalePOE
         public void SaveGame()
         {
             GameSaveData gameSaveData = new GameSaveData(noOfLvl, noOfCurrentLvl, currentLvl);
+
+            BinaryFormatter formatter = new BinaryFormatter();
+            using (FileStream fileStream = new FileStream("GameSaveData.sav", FileMode.Create))
+            {
+                formatter.Serialize(fileStream, gameSaveData);
+            }
         }
 
         //Tostring to show what the map looks like for the end user
