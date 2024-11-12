@@ -47,37 +47,37 @@
             this.tabControl1.Controls.Add(this.tabKey);
             this.tabControl1.Controls.Add(this.tabControl);
             this.tabControl1.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(73, 2);
+            this.tabControl1.Location = new System.Drawing.Point(2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(718, 531);
+            this.tabControl1.Size = new System.Drawing.Size(891, 531);
             this.tabControl1.TabIndex = 0;
             // 
             // tabKey
             // 
             this.tabKey.AutoScroll = true;
-            this.tabKey.BackColor = System.Drawing.Color.Transparent;
+            this.tabKey.BackColor = System.Drawing.Color.SteelBlue;
             this.tabKey.Controls.Add(this.label4);
             this.tabKey.Controls.Add(this.label3);
             this.tabKey.Controls.Add(this.lblGenral);
             this.tabKey.Location = new System.Drawing.Point(4, 40);
             this.tabKey.Name = "tabKey";
             this.tabKey.Padding = new System.Windows.Forms.Padding(3);
-            this.tabKey.Size = new System.Drawing.Size(710, 487);
+            this.tabKey.Size = new System.Drawing.Size(883, 487);
             this.tabKey.TabIndex = 0;
             this.tabKey.Text = "KEY";
             // 
             // tabControl
             // 
+            this.tabControl.BackColor = System.Drawing.Color.SteelBlue;
             this.tabControl.Controls.Add(this.label1);
             this.tabControl.Controls.Add(this.label2);
             this.tabControl.Location = new System.Drawing.Point(4, 40);
             this.tabControl.Name = "tabControl";
             this.tabControl.Padding = new System.Windows.Forms.Padding(3);
-            this.tabControl.Size = new System.Drawing.Size(710, 487);
+            this.tabControl.Size = new System.Drawing.Size(883, 487);
             this.tabControl.TabIndex = 1;
             this.tabControl.Text = "CONTROLS";
-            this.tabControl.UseVisualStyleBackColor = true;
             // 
             // lblGenral
             // 
@@ -120,7 +120,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.LightPink;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 90);
+            this.label2.Location = new System.Drawing.Point(28, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(314, 195);
             this.label2.TabIndex = 9;
@@ -132,7 +132,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.LightPink;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(373, 90);
+            this.label1.Location = new System.Drawing.Point(358, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(308, 195);
             this.label1.TabIndex = 10;
@@ -146,6 +146,8 @@
             this.ClientSize = new System.Drawing.Size(892, 545);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Info";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Info";
