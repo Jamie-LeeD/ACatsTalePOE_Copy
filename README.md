@@ -25,3 +25,7 @@ Code & Video Reference ,Bibliography and Credits List -[Reference_Bibiliography_
 Game Report Vs3 - [GameReport3_GADEP3.pdf](https://github.com/user-attachments/files/17732825/GameReport3_GADEP3.pdf)
 
 Code and Game Demonstration Video Vs2 - 
+
+Please Note :
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Due to the Following Error on Tiyah's Computer when using Github, work had to be done seperately ,however be commited only from Jamie's computer to maintain the code we had already completed together and prevent restarting - However, work task division was done according to the project schedule to maintain teamwork and equal completion of code questions. - Git failed with a fatal error. Git failed with a fatal error. error: open(".vs/ACatsTalePOE/FileContentIndex/66828855-c95a-4a8b-a20c-55071b73c99b.vsidx"): Permission denied fatal: Unable to process path .vs/ACatsTalePOE/FileContentIndex/66828855-c95a-4a8b-a20c-55071b73c99b.vsidx
