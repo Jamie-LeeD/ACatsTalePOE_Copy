@@ -70,6 +70,12 @@
       <DependentUpon>Info.cs</DependentUpon>
     </Compile>
     <Compile Include="Level.cs" />
+    <Compile Include="Load.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Load.Designer.cs">
+      <DependentUpon>Load.cs</DependentUpon>
+    </Compile>
     <Compile Include="PickupTile.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Program.cs" />
