@@ -18,9 +18,9 @@ Code and Game Demonstration Video Vs1 - https://drive.google.com/file/d/1MnMnk3p
 
 Part 3 of POE
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Project Schedule Vs3 -
+Project Schedule Vs3 - [ProjectSchedule_Part3_GADE6122.xlsx](https://github.com/user-attachments/files/17731598/ProjectSchedule_Part3_GADE6122.xlsx)
 
-Code & Video Reference ,Bibliography and Credits List -
+Code & Video Reference ,Bibliography and Credits List -[Reference_Bibiliography_Credits_List_GADEP3.pdf](https://github.com/user-attachments/files/17731541/Reference_Bibiliography_Credits_List_GADEP3.pdf)
 
 Game Report Vs3 - 
 
