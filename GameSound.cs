@@ -54,3 +54,8 @@ namespace ACatsTalePOE
         }
     }
 }
+
+//References
+//Freesound .2021a. Congrats by Fupicat. 5 November 2021. [Online]. Available at: https://freesound.org/people/Fupicat/sounds/607207/  [Accessed 6 November 2024].
+//Freesound 2021b. Freesound - Explode by Fupicat. 5 November 2021. [Online]. Available at: https://freesound.org/people/Fupicat/sounds/607206/  [Accessed 8 November 2024].
+//Freesounds .2024. Freesound - 2024-02-16_Background-Sound_Game-music_Remix by kevp888. 17 February 2024. [Online]. Available at: https://freesound.org/people/kevp888/sounds/723909/ [Accessed 5 November 2024].
